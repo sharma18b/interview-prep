@@ -1,0 +1,27 @@
+<%- include('partials/header'); -%>
+<link rel="stylesheet" href="/companies.css">
+
+<div class="X">
+
+<h1> Companies </h1>
+<ul class="card-list">
+  <div class="wrapper">
+<% if (companies.length > 0) { %>
+      <% companies.forEach(company => { %>
+
+      <a href="/company/<%= company.name.toLowerCase() %>">  <div class="card 1" >
+  <div class="card_image" > <img src="<%= company.linktologo %>"  /> </div>
+  <div class="card_title title-black" href="/company/<%= company.name.toLowerCase() %>">
+
+  </div>
+</div></a>
+
+      <% }) %>
+    <% } else { %>
+      <p>There are no companies to display...</p>
+    <% } %>
+</ul>
+</div>
+</div>
+
+    <%- include('partials/footer'); -%>

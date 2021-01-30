@@ -1,0 +1,20 @@
+
+<%- include("./partials/header.ejs") %>
+
+  <div class="blogs content">
+    <h2>All Experiences</h2>
+
+    <% if (blogs.length > 0) { %>
+      <% blogs.forEach(blog => { %>
+        <a class="single" href="/intexp/<%= blog._id %>">
+        <h3 class="title"><%= blog.title %></h3>
+        <p class="snippet"><%= blog.snippet %></p>
+        </a>
+      <% }) %>
+    <% } else { %>
+      <p>There are no blogs to display...</p>
+    <% } %>
+
+  </div>
+
+  <%- include("./partials/footer.ejs") %>

@@ -1,0 +1,16 @@
+<%- include("./partials/header.ejs") %>
+<link rel="stylesheet" href="/loginstyle.css">
+
+  <div class="create-blog content">
+    <form action="/topic/add_ques" method="POST">
+      <label for="Problem">Problem name</label>
+      <input type="text" id="title" name="problem" required>
+      <label for="linkto">Give the Link to solution</label>
+      <input type="text" id="snippet" name="linkto" required>
+      <label for="topic">Topic</label>
+      <input type="text" id="topic" name="topic" required>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>

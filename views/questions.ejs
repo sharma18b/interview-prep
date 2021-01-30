@@ -1,0 +1,25 @@
+<%- include('partials/header'); -%>
+<link rel="stylesheet" href="/itemspage.css">
+<div class="X">
+<h1>  Questions </h1>
+<ul class="SG">
+  <% if (questions.length > 0) { %>
+        <% questions.forEach(question => { %>
+  <!-- <li class="sgLi">
+    <div class="box">
+      <ul class="df">
+    <h3>  <a href="<%= question.linkto %>">
+      <h3 ><%= question.problem %></h3>
+      </a></h3>
+
+    </ul>
+  </div>
+ </li> -->
+  <a href="<%= question.linkto %>" class="btn btn-success" style="font-size:1vw"><%= question.problem %></a>
+ <% }) %>
+<% } else { %>
+ <p>There are no questions to display...</p>
+<% } %>
+</ul>
+<%- include('partials/footer'); -%>
+</div>

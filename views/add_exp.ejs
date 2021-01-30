@@ -1,0 +1,22 @@
+<%- include('./partials/header') %>
+ <link rel="stylesheet" href="/loginstyle.css">
+  <div class = "login">
+  <script src="./partials/fileUpload.js"></script>
+    <form action="/company/add_exp" method="POST">
+      <label for="name"><h3>Your Name</h3></label>
+      <input type="text" id="title" name="name" required>
+      <label for="smalldesc"><h3>Give a small Description</h3></label>
+      <input type="text" style="height:40px" id="snippet" name="smalldesc" required>
+      <label for="year"><h3>Year</h3></label>
+      <input type="text" id="topic" name="year" required>
+      <label for="companyname"><h3>Company Name</h3></label>
+      <input type="text" id="company" name="company" required>
+      <label for="linktoblog"><h3>branch</h3></label>
+      <input type="text" id="topic" name="branch" required>
+      <label><h3>Your display Pic</h3></label>
+      <input type="file" name="cover" class="filepond">
+      <button  class="btn btn-primary btn-block btn-large" > Submit </button>
+    </form>
+  </div>
+</body>
+</html>
