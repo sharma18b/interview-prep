@@ -1,0 +1,51 @@
+
+<link rel="stylesheet" href="/loginstyle.css">
+<%- include("./partials/header.ejs") %>
+<div class="login">
+	<h1>Login</h1>
+ <form>
+    <label for ="email" ><h3> Email </h3></label>
+    <input type = "text" name = "email" placeholder="Email" required />
+    <div class ="email error"></div>
+    <label for ="password" ><h3> Password </h3></label>
+    <input type = "password" name = "password" placeholder="Password" required />
+    <div class ="password error"></div>
+    <button  class="btn btn-primary btn-block btn-large" >login</button>
+ <h2><a href = "/signup" class="btn btn-primary btn-block btn-large" >or Signup</a></h2>
+ </form>
+ </div>
+ <script>
+ const form = document.querySelector('form');
+ const emailerror = document.querySelector('.email.error');
+ const passworderror = document.querySelector('.password.error');
+ form.addEventListener('submit',async (e) => {
+ e.preventDefault();
+ emailerror.textContent = '';
+ passworderror.textContent = '';
+ const email = form.email.value;
+ const password = form.password.value;
+
+ try {
+    const res = await fetch('/login', {
+    method : 'POST',
+    body : JSON.stringify({email , password }),
+    headers : {'Content-Type': 'application/json'}
+    });
+    const data = await res.json();
+    //console.log(data);
+    //console.log('llm');
+    if(data.errors)
+    {
+    //console.log('ander');
+    emailerror.textContent = data.errors.email;
+    passworderror.textContent = data.errors.password;
+    }
+    //console.log('cbc');
+    if (data.user)
+    {
+    location.assign('/');
+    }
+ }
+ catch(err)  {console.log(err);}
+ });
+ </script>

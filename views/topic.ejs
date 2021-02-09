@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+<link rel="stylesheet" href="/itemspage.css">
+
+<div class="X">
+<h1> List of Topics </h1>
+<ul class="SG">
+<% if (topics.length > 0) { %>
+      <% topics.forEach(topic => { %>
+         <!--<li class="sgLi">
+          <div class="box">
+              <ul class="df">
+        <h3><a href="/topic/<%= topic.name.toLowerCase() %>">
+        <h3 ><%= topic.name %></h3>
+        </a></h3>
+
+        </ul>
+      </div>
+     </li> -->
+     <a href="/topic/<%= topic.name.toLowerCase() %>" class="btn btn-primary" style="font-size:2vw">  <%= topic.name %>  </a>
+      <% }) %>
+    <% } else { %>
+      <p>There are no topics to display...</p>
+    <% } %>
+</div>
+
+    <%- include('partials/footer'); -%>

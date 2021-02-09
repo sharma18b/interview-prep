@@ -1,0 +1,33 @@
+<%- include('partials/header'); -%>
+<link rel="stylesheet" href="/itemspage.css">
+<div>
+
+
+ <div class="X">
+ <h1>  Experiences </h1>
+   <div class = "wrapper">
+  <% if (exps.length > 0) { %>
+        <% exps.forEach(exp => { %>
+          <div class = "SG">
+            <li>
+          <div >
+          <div class="card mb-4 box-shadow" style="width: 24rem;">
+            <img class="card-img-top" src="<%= exp.displayPicPath %>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><b><%= exp.name %></b></h5>
+              <p class="card-text"><%= exp.smalldesc %><a href ="<%= exp.linkto %>">read more</a></p>
+              <p class="card-text"><small class="text-muted"><%= exp.branch %> <%= exp.year %></small></p>
+            </div>
+            </div>
+            </div>
+            </li>
+            </div>
+ <% }) %>
+<% } else { %>
+ <p>There are no exps to display...</p>
+<% } %>
+</div>
+<%- include('partials/footer'); -%>
+</div>
+
+</div>

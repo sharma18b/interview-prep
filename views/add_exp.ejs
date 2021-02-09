@@ -1,0 +1,31 @@
+<%- include('./partials/header') %>
+ <link rel="stylesheet" href="/add_exp.css">
+  <div class = "login">
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script defer src="/javascripts/fileUpload.js"></script>
+  <script src="./partials/fileUpload.js"></script>
+    <form action="/company/add_exp" method="POST">
+      <label for="name"><h4>Enter Your Name</h4></label>
+      <input type="text" id="title" name="name" required>
+      <label for="smalldesc"><h4>Give a small Description </h4></label>
+      <input type="text" style="height:40px" id="snippet" name="smalldesc" required>
+      <label for="year"><h4>Year</h4></label>
+      <input type="text" id="topic" name="year" required>
+      <label for="companyname"><h4>Company Name</h4></label>
+      <input type="text" id="company" name="company" required>
+      <label for="linktoblog"><h4>Branch</h4></label>
+      <input type="text" id="topic" name="branch" required>
+      <label for="linktoblog"><h4>Link to your Blog</h4></label>
+      <input type="text" id="topic" name="linktoblog" required>
+      <label><h4>Your display Pic</h4></label>
+      <input type="file" name="cover" class="filepond">
+      <button  class="btn btn-primary btn-block btn-large" > Submit </button>
+    </form>
+  </div>
+</body>
+</html>

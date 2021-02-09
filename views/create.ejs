@@ -1,0 +1,17 @@
+
+<%- include("./partials/header.ejs") %>
+
+
+  <div class="create-blog content">
+    <form action="/intexp" method="POST">
+      <label for="title">Company name</label>
+      <input type="text" id="title" name="title" required>
+      <label for="snippet">College Name - Your Name</label>
+      <input type="text" id="snippet" name="snippet" required>
+      <label for="body">Your Experience</label>
+      <textarea id="body" name="body" required></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
