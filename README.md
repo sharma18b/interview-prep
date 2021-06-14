@@ -1,5 +1,8 @@
 # **Interview Prep Tracker**
 
+Click [here](https://interview-preperations-app.herokuapp.com/) to see the deployed website.
+Click [here](https://drive.google.com/file/d/1Av3R-zlpHrq-TQ4Cm1VvG6VlHtTGXMOO/view?usp=sharing) to watch a short video with demonstration of the website
+
 ### Some of the packages/dependencies used in developing this website are : 
 
 *   [Admin-bro](https://adminbro.com/section-modules.html)
@@ -48,7 +51,7 @@ Inorder to run the website locally on your computer , follow the steps given bel
     ```
 After doing the above steps go to your browser and type `localhost:3000`.
 
-Click [here](https://drive.google.com/file/d/1Av3R-zlpHrq-TQ4Cm1VvG6VlHtTGXMOO/view?usp=sharing) to watch a short video with demonstration of the website
+
 
 
 
