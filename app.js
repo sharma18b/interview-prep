@@ -36,11 +36,20 @@ app.use((req, res, next) => {
 
 ////"admin-bro-expressjs": "^2.1.1",
 
+<<<<<<< HEAD
 
 // database connection
 const dbURI = 'mongodb+srv://rishabh:87654321@cluster0.kf8tu.mongodb.net/node-auth';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(3000))
+=======
+const PORT1 = process.env.PORT || 3000;
+console.log("the port is " + process.env.PORT)
+// database connection
+const dbURI = 'mongodb+srv://rishabh:87654321@cluster0.kf8tu.mongodb.net/node-auth';
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
+  .then((result) => app.listen(PORT1, () => console.log(`Server is listening on port ${PORT1}...`)))
+>>>>>>> 9051421... deployed website
   .catch((err) => console.log(err));
   const db = mongoose.connection
   db.once('open', () => console.log('Connected to Mongoose'));

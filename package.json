@@ -1,7 +1,11 @@
 {
   "name": "node-express-jwt-auth",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
+=======
+  "description": "This web application created by Rishabh Sharma",
+>>>>>>> 9051421... deployed website
   "main": "app.js",
   "dependencies": {
     "@admin-bro/express": "^3.0.1",
@@ -17,12 +21,17 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.23",
     "morgan": "^1.10.0",
+<<<<<<< HEAD
+=======
+    "tslib": "^2.3.0",
+>>>>>>> 9051421... deployed website
     "validator": "^13.5.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -36,4 +45,22 @@
     "url": "https://github.com/iamshaunjp/node-express-jwt-auth/issues"
   },
   "homepage": "https://github.com/iamshaunjp/node-express-jwt-auth#readme"
+=======
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharma18b/interview-prep-final.git"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": ["heroku","example"],
+  "author": "Rishabh Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharma18b/interview-prep-final/issues"
+  },
+  "homepage": "https://github.com/sharma18b/interview-prep-final#readme"
+>>>>>>> 9051421... deployed website
 }
