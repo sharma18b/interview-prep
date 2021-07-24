@@ -10,7 +10,7 @@ Click [here](https://drive.google.com/file/d/1Av3R-zlpHrq-TQ4Cm1VvG6VlHtTGXMOO/v
 *   [Mongoose](https://mongoosejs.com/docs/)
 *   [Nodemon](https://nodemon.io/)
 
-This website is a basic tool for students preparing for internships and placements to organise and streamline the process of searching for resources along wth providing the past interview experiences in just few clicks.
+This website is a basic tool for students preparing for internships and placements to organise and streamline the process of searching for resources along with providing the past interview experiences in just few clicks.
 
 ### The website looks like the following : 
 *Admin panel*
