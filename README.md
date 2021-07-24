@@ -51,7 +51,10 @@ Inorder to run the website locally on your computer , follow the steps given bel
     ```
 After doing the above steps go to your browser and type `localhost:3000`.
 
-
+# Sunday Plans
+image backend side updation with multer module
+frontend updation
+ 
 
 
 
