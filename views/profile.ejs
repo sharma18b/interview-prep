@@ -1,5 +1,6 @@
-<%- include('partials/header'); -%>
-<link rel="stylesheet" href="/styles.css">
+<!-- <%- include('partials/header'); -%>
+
+
 <header>
 <div class="headings">
     <h2>Welcome Back  <%= user.name %></h2>
@@ -7,7 +8,46 @@
     <a href="/topic" class="btn-primary" style="font-size:3vw" >  Explore Topic Wise </a>
     <a href="/topic/all_questions" class="btn-success" style="font-size:3vw">  Explore All Questions  </a>
   </div>
-</header>
+</header> -->
 
-</body>
-</html>
+
+
+
+
+ <%- include('partials/header'); -%>
+  <link rel="stylesheet" href="/homecss.css">
+
+  <h1 class="headings">
+    <center>Welcome back <%=user.name %></center>
+  </h1>
+  <hr/>
+  <div class="headings">
+    <div style="padding-top: 30px;" class="row">
+      <div class="col-sm-1"></div>
+      <div class="sec col-sm-5">
+        <div class="card bg-success text-light">
+          <div class="card-body">
+            <h5 class="card-title">Explore Topic wise</h5>
+            <p class="card-text">Click below to solve questions related to a particular topic</p>
+            <a href="/topic" class="btn border border-light btn-info">Topic Wise</a>
+          </div>
+        </div>
+      </div>
+      <div class="sec col-sm-5">
+        <div class="card bg-primary text-light">
+          <div class="card-body">
+            <h5 class="card-title">Explore all_questions</h5>
+            <p class="card-text">Click Below to look for all the questions in the database</p>
+            <a href="/topic/all_questions" class="btn border-light border btn-success">Questions , Lots of Questions</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+
+  <%- include('partials/footer'); -%>
+
+
+
+<%- include('partials/footer'); -%>

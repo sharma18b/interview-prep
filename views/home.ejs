@@ -1,15 +1,33 @@
- <%- include('partials/header'); -%>
+<%- include('partials/header'); -%>
+  <link rel="stylesheet" href="/homecss.css">
 
- <link rel="stylesheet" href="/styles.css">
-<!--
-<link rel="stylesheet" href="/homecss.css"> -->
-
-<h1 style="font-size:6vw" ><center>Track your Progress</center></h1>
+  <h1 class="headings">
+    <center>Track your Progress</center>
+  </h1>
   <div class="headings">
-    <h3 style="font-size:4vw">Programming and Interview Experiences</h3>
-    <%# <a href="/intexp" class="btn btn-success">Interview Experiences</a> %>
-    <a href="/profile" class="btn btn-primary" style="font-size:3vw">Programming</a>
-    <a href="/company" class="btn btn-success" style="font-size:3vw">Interview Experience</a>
+    <h3 class="headings"><center>Programming and Interview Experiences</center></h3>
+    <div style="padding-top: 30px;" class="row">
+      <div class="col-sm-1"></div>
+      <div class="sec col-sm-5">
+        <div class="card bg-info text-light">
+          <div class="card-body">
+            <h5 class="card-title">Programming Section</h5>
+            <p class="card-text">Find practice questions related to competitive coding</p>
+            <a href="/profile" class="btn border border-light btn-success">Lets Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="sec col-sm-5">
+        <div class="card bg-success text-light">
+          <div class="card-body">
+            <h5 class="card-title">Interview Experiences</h5>
+            <p class="card-text">Find here different blogs written by people sharing their Interview Experiences</p>
+            <a href="/company" class="btn border-light border btn-info">Experiences</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
   </div>
-</body>
-</html>
+
+  <%- include('partials/footer'); -%>

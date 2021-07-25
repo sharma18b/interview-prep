@@ -1,51 +1,98 @@
+<!-- <link rel="stylesheet" href="/loginstyle.css"> -->
+<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="css/styles.css">
 
-<link rel="stylesheet" href="/loginstyle.css">
 <%- include("./partials/header.ejs") %>
-<div class="login">
-	<h1>Login</h1>
- <form>
-    <label for ="email" ><h3> Email </h3></label>
-    <input type = "text" name = "email" placeholder="Email" required />
-    <div class ="email error"></div>
-    <label for ="password" ><h3> Password </h3></label>
-    <input type = "password" name = "password" placeholder="Password" required />
-    <div class ="password error"></div>
-    <button  class="btn btn-primary btn-block btn-large" >login</button>
- <h2><a href = "/signup" class="btn btn-primary btn-block btn-large" >or Signup</a></h2>
- </form>
- </div>
- <script>
- const form = document.querySelector('form');
- const emailerror = document.querySelector('.email.error');
- const passworderror = document.querySelector('.password.error');
- form.addEventListener('submit',async (e) => {
- e.preventDefault();
- emailerror.textContent = '';
- passworderror.textContent = '';
- const email = form.email.value;
- const password = form.password.value;
 
- try {
-    const res = await fetch('/login', {
-    method : 'POST',
-    body : JSON.stringify({email , password }),
-    headers : {'Content-Type': 'application/json'}
-    });
-    const data = await res.json();
-    //console.log(data);
-    //console.log('llm');
-    if(data.errors)
-    {
-    //console.log('ander');
-    emailerror.textContent = data.errors.email;
-    passworderror.textContent = data.errors.password;
-    }
-    //console.log('cbc');
-    if (data.user)
-    {
-    location.assign('/');
-    }
- }
- catch(err)  {console.log(err);}
- });
- </script>
+
+   <!-- <div class="login">
+      <h1>Login</h1>
+      <form>
+         <label for="email">
+            <h3> Email </h3>
+         </label>
+         <input type="text" name="email" placeholder="Email" required />
+         <div class="email error"></div>
+         <label for="password">
+            <h3> Password </h3>
+         </label>
+         <input type="password" name="password" placeholder="Password" required />
+         <div class="password error"></div>
+         <button class="btn btn-primary btn-block btn-large">login</button>
+         <h2><a href="/signup" class="btn btn-primary btn-block btn-large">or Signup</a></h2>
+      </form>
+   </div> -->
+
+   <section class="sign-in m-5">
+      <div class="container">
+         <div class="signin-content">
+            <div class="signin-image">
+               <figure><img src="/signin-image.jpg" alt="sign up image"></figure>
+               <center><button class="btn btn-success text-light"><a href="/signup" style="text-decoration: none;" class="text-white ssignup-image-link">Create an account</a></button></center>
+            </div>
+
+            <div class="signin-form">
+               <h2 class="form-title">Log in</h2>
+               <form class="register-form" id="login-form">
+                  <div class="form-group">
+                     <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                     <input type="text" name="email" id="email" placeholder="Email" />
+                     <div class="email error"></div>
+                  </div>
+                  <div class="form-group">
+                     <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                     <input type="password" name="password" id="password" placeholder="Password" />
+                     <div class="password error"></div>
+                  </div>
+                  <div class="form-group form-button">
+                     <button class="btn btn-primary btn-block btn-large">login</button>
+                  </div>
+               </form>
+               <!-- <div class="social-login">
+                  <span class="social-label">Or login with</span>
+                  <ul class="socials">
+                     <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                     <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                     <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                  </ul>
+               </div> -->
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+   <script>
+      const form = document.querySelector('form');
+      const emailerror = document.querySelector('.email.error');
+      const passworderror = document.querySelector('.password.error');
+      form.addEventListener('submit', async (e) => {
+         e.preventDefault();
+         emailerror.textContent = '';
+         passworderror.textContent = '';
+         const email = form.email.value;
+         const password = form.password.value;
+
+         try {
+            const res = await fetch('/login', {
+               method: 'POST',
+               body: JSON.stringify({ email, password }),
+               headers: { 'Content-Type': 'application/json' }
+            });
+            const data = await res.json();
+            //console.log(data);
+            //console.log('llm');
+            if (data.errors) {
+               //console.log('ander');
+               emailerror.textContent = data.errors.email;
+               passworderror.textContent = data.errors.password;
+            }
+            //console.log('cbc');
+            if (data.user) {
+               location.assign('/');
+            }
+         }
+         catch (err) { console.log(err); }
+      });
+   </script>

@@ -1,6 +1,14 @@
-<link rel="stylesheet" href="/loginstyle.css">
+<!-- <link rel="stylesheet" href="/loginstyle.css"> -->
+<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="css/styles.css">
+
+
 <%- include("./partials/header.ejs") %>
-<div class="login">
+
+
+   <!-- <link rel="stylesheet" href="scss/style.scss"> -->
+
+   <!-- <div class="login">
  <form>
     <h1>Sign up</h1>
     <label for ="name" ><h3>Your Name</h3></label>
@@ -13,37 +21,79 @@
     <div class ="password error"></div>
     <button class="btn btn-primary btn-block btn-large" >Sign up</button>
 <h2><a href = "/login" class="btn btn-primary btn-block btn-large" >or Login</a></h2>
- </form></div>
- <script>
- const form = document.querySelector('form');
- const emailerror = document.querySelector('.email.error');
- const passworderror = document.querySelector('.password.error');
- form.addEventListener('submit',async (e) => {
- e.preventDefault();
- emailerror.textContent = '';
- passworderror.textContent = '';
- const name = form.name.value;
- const email = form.email.value;
- const password = form.password.value;
+ </form>
+</div> -->
 
- try {
-    const res = await fetch('/signup', {
-    method : 'POST',
-    body : JSON.stringify({name ,email , password }),
-    headers : {'Content-Type': 'application/json'}
-    });
-    const data = await res.json();
-    console.log(data);
-    if(data.errors)
-    {
-    emailerror.textContent = data.errors.email;
-    passworderror.textContent = data.errors.password;
-    }
-    if (data.user)
-    {
-       location.assign('/');
-    }
- }
- catch(err)  {console.log(err);}
- });
- </script>
+   <section class="signup m-5">
+      <div class="container">
+         <div class="signup-content">
+            <div class="signup-form">
+               <h2 class="form-title">Sign up</h2>
+               <form class="register-form" id="register-form">
+                  <div class="form-group">
+                     <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                     <input type="text" name="name" id="name" placeholder="Your Name" required/>
+                  </div>
+                  <div class="form-group">
+                     <label for="email"><i class="zmdi zmdi-email"></i></label>
+                     <input type="email" name="email" id="email" placeholder="Your Email" />
+                  </div>
+                  <div class ="email error"></div>
+                  <div class="form-group">
+                     <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                     <input type="password" name="password" id="password" placeholder="Password" />
+                  </div>
+                  <div class ="password error"></div>
+                  <div class="form-group">
+                     <button class="btn btn-primary btn-block btn-large" >Sign up</button>
+                  </div> 
+                  
+               </form>
+          </div>
+            <div class="signup-image">
+               <figure><img src="signup-image.jpg" alt="sing up image"></figure>
+               <center><button class="btn btn-success text-light"><a href="/login" style="text-decoration: none;" class="text-white ssignup-image-link">I am already a member</a></button></center>
+
+            </div>
+         </div>
+      </div>
+   </section> 
+
+   <script>
+      const form = document.querySelector('form');
+      console.log("hello");
+      const emailerror = document.querySelector('.email.error');
+      const passworderror = document.querySelector('.password.error');
+      form.addEventListener('submit', async (e) => {
+         console.log("hello");
+         e.preventDefault();
+         emailerror.textContent = '';
+         passworderror.textContent = '';
+         const name = form.name.value;
+         const email = form.email.value;
+         const password = form.password.value;
+
+         try {
+            const res = await fetch('/signup', {
+               method: 'POST',
+               body: JSON.stringify({ name, email, password }),
+               headers: { 'Content-Type': 'application/json' }
+            });
+            const data = await res.json();
+            console.log(data);
+            if (data.errors) {
+               emailerror.textContent = data.errors.email;
+               passworderror.textContent = data.errors.password;
+            }
+            if (data.user) {
+               location.assign('/');
+            }
+         }
+         catch (err) { console.log(err); }
+      });
+
+
+   </script>
+
+
+<%- include("./partials/footer.ejs") %>

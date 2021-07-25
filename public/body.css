@@ -12,3 +12,9 @@ if it's not present, don't show loader */
 	z-index: 9999;
 	background: url("./cat.gif") center no-repeat #fff;
 }
+
+
+
+body{
+	background: whitesmoke;
+}
