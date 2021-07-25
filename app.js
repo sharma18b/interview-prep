@@ -39,7 +39,7 @@ app.use((req, res, next) => {
 const PORT1 = process.env.PORT || 3000;
 console.log("the port is " + process.env.PORT)
 // database connection
-const dbURI = 'mongodb+srv://rishabh:87654321@cluster0.kf8tu.mongodb.net/node-auth';
+const dbURI = 'mongodb+srv://rishabh:87654321@cluster0.kf8tu.mongodb.net/node-auth1';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(PORT1, () => console.log(`Server is listening on port ${PORT1}...`)))
   .catch((err) => console.log(err));
