@@ -14,6 +14,11 @@ blogSchema = new Schema({
     body : {
     type : String,
     required : true,
+    },
+    img:
+    {
+        type: String,
+        required:true,
     }
 
 }, {timestamps : true});

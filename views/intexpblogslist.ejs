@@ -9,7 +9,9 @@
         <a class="single" href="/intexp/<%= blog._id %>">
         <h3 class="title"><%= blog.title %></h3>
         <p class="snippet"><%= blog.snippet %></p>
+        
         </a>
+        <img src="<%= blog.img %>" alt=""> 
       <% }) %>
     <% } else { %>
       <p>There are no blogs to display...</p>
