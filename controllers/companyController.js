@@ -74,28 +74,41 @@ const exp_create_get = (req, res) => {
 const exp_create_post = async (req, res) => {
   const companyname = req.body.company;
   var company_id;
+  var comp1;
     await Company.find({name : companyname}).then(result =>  {
      if (!Boolean(result.length > 0))
      {
        console.log("No such company exists so new company is being created");
        const companytest = new Company({
-         name : companyname
+         name : req.body.company,
        });
+       console.log(companytest);
+      //  try {
+      //  comp = companytest.save();
+      //  console.log("ho gayi company save");
+      //  console.log(comp);
+      //  console.log(comp.id);
        companytest.save()
        .then(result1 => {
          console.log(result1); // result 1 is the new topic that was created
-        company_id = result1._id; // extracting its id from database
+        company_id = result1.id; // extracting its id from database
 
        })
          .catch(err => {
            console.log(err);
            console.log("new company save hone me error hai check");
          });
+      company_id = companytest.id;
+      console.log('hell'); 
+    // }catch{
+    //   console.log("me to thak gai bhaisha ");
+
+
      }
      else
      {
        console.log("company name matched in database");
-      company_id = result[0].id;
+       company_id = result[0].id;
        // const exp = new Newexp({
        //   name: req.body.name,
        //   company: company_id,
@@ -129,6 +142,7 @@ const exp_create_post = async (req, res) => {
    branch: req.body.branch,
    year: req.body.year,
    smalldesc: req.body.smalldesc,
+   social:req.body.social,
    linktoblog:req.body.linktoblog,
    img: final_path
  });

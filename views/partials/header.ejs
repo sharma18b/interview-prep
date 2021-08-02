@@ -10,19 +10,24 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
-            <% if (title) { if (title=="Companies List") { %>
+            <% if (user) { %>
             <li class="nav-item">
-              <a class="nav-link" href="/company/add_exp">Share Your Exp</a>
+              <a class="nav-link" href="/company/add_exp">Share Your Experience</a>
             </li>
-            <% }}%>
+            <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Share Your Experience</a>
+            </li>
+            <% } %>
+
             <% if (title) { if (title=="Topics List" ) { %>
             <li class="nav-item">
-              <a class="nav-link" href="/topic/add_ques">Add a new ques</a>
+              <a class="nav-link" href="/topic/add_ques">Add a new Ques</a>
             </li>
             <% }}%>
              <% if (title) { if (title=="Question List") { %>
             <li class="nav-item">
-              <a class="nav-link" href="/topic/add_ques">Add a new ques</a>
+              <a class="nav-link" href="/topic/add_ques">Add a new Ques</a>
             </li>
             <% }}%>
           </ul>

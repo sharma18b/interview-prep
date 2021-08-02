@@ -1,106 +1,138 @@
-
- <!-- <link rel="stylesheet" href="/add_exp.css"> -->
- <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+<!-- <link rel="stylesheet" href="/add_exp.css"> -->
+<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 <link rel="stylesheet" href="css/styles.css">
 
 <%- include('./partials/header') %>
-<!-- 
-adding style to divide the page column wise -->
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* Create four equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 900px) {
-    .column  {
-      width: 50%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column  {
-      width: 100%;
-    }
-  }
-  </style>
+  <div class="container border border-white p-5 mt-5">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <form action="/company/add_exp" enctype="multipart/form-data" method="POST">
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="title" name="name" placeholder="Enter your name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="smalldesc" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="snippet" name="smalldesc" placeholder="Give a small description about your experience" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="year" class="col-sm-2 col-form-label">Year</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="topic" name="year" placeholder="Sophomore" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="companyname" class="col-sm-2 col-form-label">Company</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="company" name="company" placeholder="Google" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="branch" class="col-sm-2 col-form-label">Branch</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="topic" name="branch" placeholder="Computer Science" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="linktoblog" class="col-sm-2 col-form-label">Insert a link to your blog</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="topic" name="linktoblog" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="social" class="col-sm-2 col-form-label">Your social handle</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="social" name="social" placeholder="linkedin/facebook page link" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="image" class="col-sm-2 col-form-label">Your display pic</label>
+            <div class="col-sm-10">
+              <input type="file" id="image" name="image" value="" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <center><button type="submit" class="btn btn-primary">Submit</button></center>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
 
 
-<section class="sign-in m-5">
-  
-  
-  <div class="container">
-    <div class="row" >
-    <div class="column" style="background-color:#aaa;">
-     <div class="signin-content">
-        <div class="signin-image">
-           <figure><img src="/signin-image.jpg" alt="sign up image"></figure>
-           <button class="btn btn-success text-light"><a href="/company" style="text-decoration: none;" class="text-white ssignup-image-link">Read other's Experiences</a></button>
-        </div>
-      </div>
-      </div>
-      <div class="column" style="background-color:#bbb;">
-        <div class="signin-form">
-           <h2 class="form-title">Share Your Experience</h2>
-           <form action="/company/add_exp" enctype="multipart/form-data" method="POST" class="register-form" id="login-form">
+
+
+  <%- include('./partials/footer') %>
+
+<!--  
+ <section class="sign-in m-5">
+   
+   
+   <div class="container">
+     <div class="row" >
+     <div class="column" style="background-color:#aaa;">
+      <div class="signin-content">
+         <div class="signin-image">
+            <figure><img src="/signin-image.jpg" alt="sign up image"></figure>
+            <button class="btn btn-success text-light"><a href="/company" style="text-decoration: none;" class="text-white ssignup-image-link">Read other's Experiences</a></button>
+         </div>
+       </div>
+       </div>
+       <div class="column" style="background-color:#bbb;">
+         <div class="signin-form">
+            <h2 class="form-title">Share Your Experience</h2>
+            <form action="/company/add_exp" enctype="multipart/form-data" method="POST" class="register-form" id="login-form">
+               <div class="form-group">
+                 <h4>Enter Your Name</h4>
+                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                 <input type="text" name="name" id="title" placeholder="Name" required>
+              </div>
               <div class="form-group">
-                <h4>Enter Your Name</h4>
-                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                <input type="text" name="name" id="title" placeholder="Name" required>
-             </div>
-             <div class="form-group">
-              <h4>Give a small Description </h4>
-              <label for="smalldesc"><i class="zmdi zmdi-account material-icons-name"></i></label>
-              <input type= "text" style="height:40px" id="snippet" name="smalldesc" required>
+               <h4>Give a small Description </h4>
+               <label for="smalldesc"><i class="zmdi zmdi-account material-icons-name"></i></label>
+               <input type= "text" style="height:40px" id="snippet" name="smalldesc" required>
+            </div>
+            <div class="form-group">
+             <h4> Year </h4>
+             <label for="year"><i class="zmdi zmdi-account material-icons-name"></i></label>
+             <input type= "text" style="height:40px" id="topic" name="year" required>
            </div>
            <div class="form-group">
-            <h4> Year </h4>
-            <label for="year"><i class="zmdi zmdi-account material-icons-name"></i></label>
-            <input type= "text" style="height:40px" id="topic" name="year" required>
-          </div>
-          <div class="form-group">
-            <h4> Company Name </h4>
-            <label for="compnayname"><i class="zmdi zmdi-account material-icons-name"></i></label>
-            <input type= "text"  id="company" name="company" required>
-          </div>
-          <div class="form-group">
-            <h4> Branch </h4>
-            <label for="branch"><i class="zmdi zmdi-account material-icons-name"></i></label>
-            <input type= "text"  id="branch" name="branch" required>
-          </div>
-          <div class="form-group">
-            <h4> Link to Your Blog </h4>
-            <label for="linktoblog"><i class="zmdi zmdi-account material-icons-name"></i></label>
-            <input type= "text"  id="linktoblog" name="linktoblog" required>
-          </div>
-      
-      <div class="form-group">
-        <h4>Your display Pic</h4>
-        <label for="image"></label>
-        <input type="file" id="image" name="image" value="" required>
+             <h4> Company Name </h4>
+             <label for="compnayname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+             <input type= "text"  id="company" name="company" required>
+           </div>
+           <div class="form-group">
+             <h4> Branch </h4>
+             <label for="branch"><i class="zmdi zmdi-account material-icons-name"></i></label>
+             <input type= "text"  id="branch" name="branch" required>
+           </div>
+           <div class="form-group">
+             <h4> Link to Your Blog </h4>
+             <label for="linktoblog"><i class="zmdi zmdi-account material-icons-name"></i></label>
+             <input type= "text"  id="linktoblog" name="linktoblog" required>
+           </div>
+       
+       <div class="form-group">
+         <h4>Your display Pic</h4>
+         <label for="image"></label>
+         <input type="file" id="image" name="image" value="" required>
+       </div>
+       <button  class="btn btn-primary btn-block btn-large" > Submit </button>
+            </form>
+         </div>
       </div>
-      <button  class="btn btn-primary btn-block btn-large" > Submit </button>
-           </form>
-        </div>
-     </div>
-  </div>
-</div>
-</section>
-
-</body>
-</html>
+   </div>
+ </div>
+ </section>
+ 
+ </body>
+ </html> -->

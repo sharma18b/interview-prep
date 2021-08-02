@@ -1,7 +1,7 @@
 {
-  "name": "node-express-jwt-auth",
+  "name": "interview-preparation-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "This web application created by Rishabh Sharma && Samaksh Tak",
   "main": "app.js",
   "dependencies": {
     "@admin-bro/express": "^3.0.1",
@@ -26,17 +26,20 @@
     "nodemon": "^2.0.12"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamshaunjp/node-express-jwt-auth.git"
+    "url": "git+https://github.com/sharma18b/interview-prep-final.git"
   },
-  "keywords": [],
-  "author": "",
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": ["heroku","example"],
+  "author": "Rishabh Sharma",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iamshaunjp/node-express-jwt-auth/issues"
+    "url": "https://github.com/sharma18b/interview-prep-final/issues"
   },
-  "homepage": "https://github.com/iamshaunjp/node-express-jwt-auth#readme"
+  "homepage": "https://github.com/sharma18b/interview-prep-final#readme"
 }

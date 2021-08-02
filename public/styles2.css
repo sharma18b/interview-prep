@@ -1,62 +1,190 @@
-/* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-body{
-  margin: 20px 40px;
-  background: url("./iitg3.jpg");
+/*body{
+  padding-top: None;
+  color: #2e3e50;
+   background: #d8dddd;
+  /*background-image: url("./iitg.jpg");
+  /* background: url("./bg2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 20px;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+}*/
+.X{
+  margin: auto;
+  padding-top: 15px;
+  max-width: 1440px;
+  border-radius: 10px;
 
+  /*background-color: rgb(0,0,0); Fallback color
+  background-color: rgba(0,0,0, 0.4); Black w/opacity/see-through*/
+  box-shadow: 0 2px 6px 0 rgba(0,0,0, .3);
 }
-* {
+.wrapper {
+  display: grid;
+  padding-left: 10px;
+  padding-right: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+h1,h2,h3{
+  text-align: center;
+  font-family: 'Poppins';
+  color:blue;
+}
+li{
+  color: #2c3e50;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+  /* text-align: center; */
+  letter-spacing: 1px;
+  font-family: 'Raleway', serif;
+}
+/SG = style grid/
+.SG{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.SG .sgLi{
+  min-width: 24%;
+  margin: 2% .35%;
+  display: inline-flex;
+  box-shadow: 0 2px 4px rgba(0,0,0, .2);
+}
+.SG .sgLi:hover{
+  box-shadow:0 5px 10px rgba(0,0,0,.15);}
+.SG .box{
+  width: auto;
+  height: auto;
+  padding: 2% 6%;
+  border-radius: 40px;
+  text-align: center;
+  font-weight: bold;
+ border: 2px solid #f1f1f1;
   box-sizing: border-box;
 }
-
-body {
-  font-family: Arial;
-  padding: 30px;
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
+/* 
+  .card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+} */
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
+
+.card .card_image {
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+}
+/*
+.card .card_image img {
+  /* width: inherit;
+  height: inherit; */
+  /* width: 300px;
+  height: 300px;
+  size:contain;
+  border-radius: 40px; */
+  /* //object-fit: cover; */
+
+/* 
+.card .card_title {
   text-align: center;
-  background: white;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}*/
+ 
+.card:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+} 
+/*
+.title-white {
+  color: white;
 }
 
-.header h1 {
-  font-size: 50px;
-  text-align: center;
-}
+.title-black {
+  color: black;
+} */
 
-.wrapper {
-  width: 600px;
-  margin: 20px auto;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
   }
+} 
+
+
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
+
+
+/*Styles */
+.df{list-style-type: disc;}
+.s1{list-style-type: square;}
+.s2{list-style-type: circle;}
+.s3{list-style-type: decimal;}
+.s4{list-style-type: decimal-leading-zero;}
+.s5{list-style-type: lower-alpha;}
+.s6{list-style-type: upper-alpha;}
+.s7{list-style-type: lower-roman;}
+.s8{list-style-type: upper-roman;}
+.s9{list-style-type: lower-greek;}
+.s10{list-style-type: georgian;}
+.s11{list-style-type: hebrew;}
+.s12{list-style-type: hiragana;}
+.s13{list-style-type: hiragana-iroha;}
+.s14{list-style-type: katakana;}
+.s15{list-style-type: katakana-iroha;}
+.s16{list-style-type: cjk-ideographic;}
+.s17{list-style-image: url(//goo.gl/L3tqpe);}
+.s18{list-style: none;}
+.s18 li:before{
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  display: inline-block;
+  background: url(//goo.gl/lcPSVD);
+  background-position: 50%;
+}
+.s19{list-style: none;}
+.s19 li:before{
+  content: '\f0a9';
+  margin-right: 15px;
+  font-family: FontAwesome;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
+/* responsive grid*/
+@media (max-width: 970px){
+  .SG .sgLi{width: 180px;}}
+@media (max-width: 425px){
+  .SG .sgLi{width: 100%;}
 }

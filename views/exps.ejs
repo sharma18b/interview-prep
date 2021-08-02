@@ -1,19 +1,20 @@
 <%- include('partials/header'); -%>
+<link rel="stylesheet" href="/styles2.css">
       <h1> Experiences </h1>
       <div class="wrapper">
         <% if (exps.length> 0) { %>
           <% exps.forEach(exp=> { %>
             <div class="SG">
-              <li>
+              <!-- <li> -->
                 <div>
-                  <div class="card mb-4 box-shadow" style="width: 24rem;">
-                    <img class="card-img-top" src="/<%= exp.img %>" alt="Card image cap">
+                  <div class="card mb-4 box-shadow h-100 p-2 m-1" style="width: 20rem;">
+                    <img class="card-img-top" height = 200px  src="/<%= exp.img %>" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title"><b><a href="exp.social">
+                      <h5 class="card-title"><b><a href="<%= exp.social %>">
                             <%= exp.name %>
                           </a></b></h5>
                       <p class="card-text">
-                        <%= exp.smalldesc %><a href="<%= exp.desc %>">read more</a>
+                        <%= exp.smalldesc %><br><a href="<%= exp.linktoblog %>" style="text-decoration: none;">Read more</a>
                       </p>
                       <p class="card-text"><small class="text-muted">
                           <%= exp.branch %>
@@ -22,7 +23,7 @@
                     </div>
                   </div>
                 </div>
-              </li>
+              <!-- </li> -->
             </div>
             <% }) %>
               <% } else { %>

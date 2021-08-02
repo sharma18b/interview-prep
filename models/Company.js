@@ -26,16 +26,6 @@ const newexp = new mongoose.Schema({
     smalldesc:
     { type: String,
      },
-    displayPic :
-    {
-      type : Buffer,
-      // required : true
-    },
-    displayPicType :
-    {
-      type : String,
-      // required : true
-    },
     branch: {
       type: String
     },
@@ -66,11 +56,11 @@ const newexp = new mongoose.Schema({
     }
 });
 
-newexp.virtual('displayPicPath').get(function() {
-  if (this.displayPic != null && this.displayPicType != null) {
-    return `data:${this.displayPicType};charset=utf-8;base64,${this.displayPic.toString('base64')}`
-  }
-});
+// newexp.virtual('displayPicPath').get(function() {
+//   if (this.displayPic != null && this.displayPicType != null) {
+//     return `data:${this.displayPicType};charset=utf-8;base64,${this.displayPic.toString('base64')}`
+//   }
+// });
 
 const Newexp = mongoose.model('Newexp',newexp);
 const Company = mongoose.model('Company', company);

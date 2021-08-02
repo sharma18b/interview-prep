@@ -1,19 +1,20 @@
-body{
-  padding-top: 20px;
+/*body{
+  padding-top: None;
   color: #2e3e50;
    background: #d8dddd;
-  /*background-image: url("./iitg.jpg"); */
-  background: url("./bg2.jpeg");
+  /*background-image: url("./iitg.jpg");
+  /* background: url("./bg2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-}
+}*/
 .X{
   margin: auto;
-  padding: 1% 2%;
+  padding-top: 15px;
   max-width: 1440px;
-  border-radius: 1px;
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  border-radius: 10px;
+
+  /*background-color: rgb(0,0,0); Fallback color
+  background-color: rgba(0,0,0, 0.4); Black w/opacity/see-through*/
   box-shadow: 0 2px 6px 0 rgba(0,0,0, .3);
 }
 .wrapper {
@@ -23,8 +24,8 @@ body{
 }
 h1,h2,h3{
   text-align: center;
-  font-family: 'Baloo Tamma', cursive;
-  color:white;
+  font-family: 'Poppins';
+  color:blue;
 }
 li{
   color: #2c3e50;
@@ -35,7 +36,7 @@ li{
   letter-spacing: 1px;
   font-family: 'Raleway', serif;
 }
-/*SG = style grid*/
+/SG = style grid/
 .SG{
   margin: 0;
   padding: 0;
