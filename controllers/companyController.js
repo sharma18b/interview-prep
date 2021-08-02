@@ -117,16 +117,24 @@ const exp_create_post = async (req, res) => {
      }
    })
  .catch(err => { console.log("company find with topicname me error hai");});
+
+ console.log(req.file);
+  const path1 = req.file.path.replace(/\\/g, '/');
+  console.log(path1);
+  const final_path = path1.slice(7);
+  console.log(final_path + 'after slicing the path');
   const exp = new Newexp({
    name: req.body.name,
    company: company_id,
    branch: req.body.branch,
    year: req.body.year,
    smalldesc: req.body.smalldesc,
-   linktoblog:req.body.linktoblog
+   linktoblog:req.body.linktoblog,
+   img: final_path
  });
  console.log('bhai yha aa gya hu');
- saveCover(exp, req.body.cover);
+ 
+ // saveCover(exp, req.body.cover);
  console.log('bhai yhabhi aa gya hu');
  // exp.save()
  //   .then(result2 => {

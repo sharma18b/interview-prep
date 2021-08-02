@@ -4,7 +4,7 @@ const company = new mongoose.Schema({
   name:
   {
   type : String,
-  //required:true
+  required:true
   },
   linkto :
   {
@@ -14,6 +14,7 @@ const company = new mongoose.Schema({
  linktologo:
  {
    type : String,
+   default : "http://lokagraph.com/wp-content/uploads/2018/05/dunder-Mifflin-building-the-office-where-location.jpg"
  }
 });
 
@@ -28,12 +29,12 @@ const newexp = new mongoose.Schema({
     displayPic :
     {
       type : Buffer,
-      required : true
+      // required : true
     },
     displayPicType :
     {
       type : String,
-      required : true
+      // required : true
     },
     branch: {
       type: String
@@ -47,7 +48,7 @@ const newexp = new mongoose.Schema({
         ref: 'Company',
         required : [true,'Company must be specified']
       },
-      linktoblog:{
+    linktoblog:{
         type : String
       },
     approved:{
@@ -57,6 +58,11 @@ const newexp = new mongoose.Schema({
     social:{
       type:String,
       default:"https://www.linkedin.com/in/rishabh18b/"
+    },
+    img:
+    {
+        type: String,
+        required:true,
     }
 });
 

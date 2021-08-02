@@ -1,31 +1,106 @@
+
+ <!-- <link rel="stylesheet" href="/add_exp.css"> -->
+ <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="css/styles.css">
+
 <%- include('./partials/header') %>
- <link rel="stylesheet" href="/add_exp.css">
-  <div class = "login">
-  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
-  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
-  <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
-    <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
-    <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
-    <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
-    <script defer src="/javascripts/fileUpload.js"></script>
-  <script src="./partials/fileUpload.js"></script>
-    <form action="/company/add_exp" method="POST">
-      <label for="name"><h4>Enter Your Name</h4></label>
-      <input type="text" id="title" name="name" required>
-      <label for="smalldesc"><h4>Give a small Description </h4></label>
-      <input type="text" style="height:40px" id="snippet" name="smalldesc" required>
-      <label for="year"><h4>Year</h4></label>
-      <input type="text" id="topic" name="year" required>
-      <label for="companyname"><h4>Company Name</h4></label>
-      <input type="text" id="company" name="company" required>
-      <label for="linktoblog"><h4>Branch</h4></label>
-      <input type="text" id="topic" name="branch" required>
-      <label for="linktoblog"><h4>Link to your Blog</h4></label>
-      <input type="text" id="topic" name="linktoblog" required>
-      <label><h4>Your display Pic</h4></label>
-      <input type="file" name="cover" class="filepond">
+<!-- 
+adding style to divide the page column wise -->
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column  {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column  {
+      width: 100%;
+    }
+  }
+  </style>
+
+
+<section class="sign-in m-5">
+  
+  
+  <div class="container">
+    <div class="row" >
+    <div class="column" style="background-color:#aaa;">
+     <div class="signin-content">
+        <div class="signin-image">
+           <figure><img src="/signin-image.jpg" alt="sign up image"></figure>
+           <button class="btn btn-success text-light"><a href="/company" style="text-decoration: none;" class="text-white ssignup-image-link">Read other's Experiences</a></button>
+        </div>
+      </div>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <div class="signin-form">
+           <h2 class="form-title">Share Your Experience</h2>
+           <form action="/company/add_exp" enctype="multipart/form-data" method="POST" class="register-form" id="login-form">
+              <div class="form-group">
+                <h4>Enter Your Name</h4>
+                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                <input type="text" name="name" id="title" placeholder="Name" required>
+             </div>
+             <div class="form-group">
+              <h4>Give a small Description </h4>
+              <label for="smalldesc"><i class="zmdi zmdi-account material-icons-name"></i></label>
+              <input type= "text" style="height:40px" id="snippet" name="smalldesc" required>
+           </div>
+           <div class="form-group">
+            <h4> Year </h4>
+            <label for="year"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <input type= "text" style="height:40px" id="topic" name="year" required>
+          </div>
+          <div class="form-group">
+            <h4> Company Name </h4>
+            <label for="compnayname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <input type= "text"  id="company" name="company" required>
+          </div>
+          <div class="form-group">
+            <h4> Branch </h4>
+            <label for="branch"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <input type= "text"  id="branch" name="branch" required>
+          </div>
+          <div class="form-group">
+            <h4> Link to Your Blog </h4>
+            <label for="linktoblog"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <input type= "text"  id="linktoblog" name="linktoblog" required>
+          </div>
+      
+      <div class="form-group">
+        <h4>Your display Pic</h4>
+        <label for="image"></label>
+        <input type="file" id="image" name="image" value="" required>
+      </div>
       <button  class="btn btn-primary btn-block btn-large" > Submit </button>
-    </form>
+           </form>
+        </div>
+     </div>
   </div>
+</div>
+</section>
+
 </body>
 </html>
