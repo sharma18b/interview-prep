@@ -35,7 +35,10 @@
   "engines": {
     "node": "14.x"
   },
-  "keywords": ["heroku","example"],
+  "keywords": [
+    "heroku",
+    "example"
+  ],
   "author": "Rishabh Sharma",
   "license": "ISC",
   "bugs": {
