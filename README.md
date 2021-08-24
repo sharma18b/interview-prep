@@ -1,7 +1,7 @@
 # **Interview Prep Tracker**
 
 Click [here](https://interview-preperations-app.herokuapp.com/) to see the deployed website.
-Click [here](https://drive.google.com/file/d/1Av3R-zlpHrq-TQ4Cm1VvG6VlHtTGXMOO/view?usp=sharing) to watch a short video with demonstration of the website
+Click [here](https://drive.google.com/file/d/1Av3R-zlpHrq-TQ4Cm1VvG6VlHtTGXMOO/view?usp=sharing) to watch a short video with demonstration of the website.
 
 ### Some of the packages/dependencies used in developing this website are : 
 
