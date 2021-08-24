@@ -15,7 +15,7 @@ This website is a basic tool for students preparing for internships and placemen
 ### The website looks like the following : 
 *Admin panel*
 
-![admin-bro](https://user-images.githubusercontent.com/45677985/107876050-83a50f00-6ee9-11eb-95cf-b0c21b1119c1.png)
+![admin-bro](https://user-images.githubusercontent.com/45677985/130668946-c7c6d7a6-4196-4cc3-8461-95e4b5394035.png)
 
 *Login Page*
 
