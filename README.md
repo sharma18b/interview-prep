@@ -29,6 +29,10 @@ This website is a basic tool for students preparing for internships and placemen
 
 ![topics](https://user-images.githubusercontent.com/45677985/130667810-949a2ca0-ff46-4c5e-993b-b320e2becf40.png)
 
+*Programming - Questions*
+![questions](https://user-images.githubusercontent.com/44923359/130678189-f69cfc63-5c7e-4bce-8e8d-2c74fc73e4ba.png)
+
+
 *Interview Experience*
 
 ![Exp](https://user-images.githubusercontent.com/45677985/130667939-e7154c95-c109-4bfe-8cd9-60243327f64e.png)
