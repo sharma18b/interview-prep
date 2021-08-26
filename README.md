@@ -1,7 +1,7 @@
 # **Interview Prep Tracker**
 
 Click [here](https://interview-preperations-app.herokuapp.com/) to see the deployed website.
-Click [here](https://drive.google.com/file/d/1Av3R-zlpHrq-TQ4Cm1VvG6VlHtTGXMOO/view?usp=sharing) to watch a short video with demonstration of the website
+Click [here](https://drive.google.com/file/d/1Av3R-zlpHrq-TQ4Cm1VvG6VlHtTGXMOO/view?usp=sharing) to watch a short video with demonstration of the website.
 
 ### Some of the packages/dependencies used in developing this website are : 
 
@@ -15,27 +15,34 @@ This website is a basic tool for students preparing for internships and placemen
 ### The website looks like the following : 
 *Admin panel*
 
-![admin-bro](https://user-images.githubusercontent.com/45677985/107876050-83a50f00-6ee9-11eb-95cf-b0c21b1119c1.png)
+![admin-bro](https://user-images.githubusercontent.com/45677985/130668946-c7c6d7a6-4196-4cc3-8461-95e4b5394035.png)
 
 *Login Page*
 
-![login](https://user-images.githubusercontent.com/45677985/107876058-8869c300-6ee9-11eb-827f-f23884c0038e.png)
+![login](https://user-images.githubusercontent.com/45677985/130667512-11cef7b0-6707-4d1e-b581-20ac983c9448.png)
 
 *Homepage*
 
-![homepage](https://user-images.githubusercontent.com/45677985/107876064-8bfd4a00-6ee9-11eb-8142-228425341d80.png)
+![homepage](https://user-images.githubusercontent.com/45677985/130667662-f570f11c-b774-401b-9a03-50be311caa8e.png)
 
 *Programming - Topics*
 
-![topics](https://user-images.githubusercontent.com/45677985/107876066-8d2e7700-6ee9-11eb-830f-5c9e5d2bae38.png)
+![topics](https://user-images.githubusercontent.com/45677985/130667810-949a2ca0-ff46-4c5e-993b-b320e2becf40.png)
+
+*Programming - Questions*
+![questions](https://user-images.githubusercontent.com/44923359/130678189-f69cfc63-5c7e-4bce-8e8d-2c74fc73e4ba.png)
+
 
 *Interview Experience*
 
-![Exp](https://user-images.githubusercontent.com/45677985/107876062-8acc1d00-6ee9-11eb-9d90-550959632d53.png)
+![Exp](https://user-images.githubusercontent.com/45677985/130667939-e7154c95-c109-4bfe-8cd9-60243327f64e.png)
+
+![image](https://user-images.githubusercontent.com/45677985/130681270-55ac1fa8-006c-4bac-a61b-12b1e615ff91.png)
+
 
 *Share your Experience*
 
-![addexp](https://user-images.githubusercontent.com/45677985/107876061-8a338680-6ee9-11eb-8d9b-c44264b809e5.png)
+![addexp](https://user-images.githubusercontent.com/45677985/130668014-6a718a43-ccab-4ddd-b31e-a484f5b0ce8c.png)
 
 Inorder to run the website locally on your computer , follow the steps given below:
 
@@ -50,12 +57,6 @@ Inorder to run the website locally on your computer , follow the steps given bel
     nodemon app
     ```
 After doing the above steps go to your browser and type `localhost:3000`.
-
-# Sunday Plans
-image backend side updation with multer module
-frontend updation
- 
-
 
 
 >This website is developed by :
