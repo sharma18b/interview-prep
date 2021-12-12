@@ -22,14 +22,14 @@ const all_questions = (req, res) => {
 
 
  const topic_questions = async (req, res) => {
-    console.log('inside the topic questions')
+    // console.log('inside the topic questions')
     const topicname = req.params.topic.toString(); // topicname on printing in console gives "binary search"
     var id = "";
     await Topic.find().then(results => {results.forEach(topic => {
     if (topic.name.toLowerCase() == topicname)
     {
         id = topic.id;
-        console.log(id);
+        // console.log(id);
     }
     })});
    Question.find({topic : id ,approved:true })
@@ -43,24 +43,24 @@ const all_questions = (req, res) => {
 
 
  const question_create_post = async (req, res) => {
-   console.log(req.body);
+   // console.log(req.body);
    const hell = req.body;  // extracting info to create question
    const quesprob = hell.problem;
    const topicname = hell.topic;
    const linktoques = hell.linkto;
-   console.log(topicname); // if topic already exists then it would not create a new topic else it will create a new topic
+   // console.log(topicname); // if topic already exists then it would not create a new topic else it will create a new topic
    //var topic_id;
   await Topic.find({name : topicname}).then(result => {
      if (!Boolean(result.length > 0))
      {
 
-       console.log("No such topic exists so new topic is being created");
+       // console.log("No such topic exists so new topic is being created");
        const topictest = new Topic({
          name : topicname
        });
        topictest.save()
        .then(result1 => {
-         console.log(result1); // result 1 is the new topic that was created
+         // console.log(result1); // result 1 is the new topic that was created
          var topic_id = result1._id; // extracting its id from database
          const new_ques = new Question({problem : quesprob, linkto : linktoques, topic : topic_id });
          new_ques.save()
@@ -79,7 +79,7 @@ const all_questions = (req, res) => {
      }
      else
      {
-       console.log("topic name matched in database");
+       // console.log("topic name matched in database");
        var topic_id = result[0].id;
        const new_ques = new Question({problem : quesprob, linkto : linktoques, topic : topic_id });
        new_ques.save()
@@ -88,7 +88,7 @@ const all_questions = (req, res) => {
          })
          .catch(err => {
            console.log(err);
-           console.log("ques save me error hai ki nhi check");
+           // console.log("ques save me error hai ki nhi check");
         });
      }
    }).catch(err => { console.log("topic find with topicname me error hai");});
@@ -105,7 +105,7 @@ const all_questions = (req, res) => {
      })
      .catch(err => {
        console.log(err);
-       console.log("Question delete me dikkkt hai yaha dekh");
+       // console.log("Question delete me dikkkt hai yaha dekh");
 
      });
  }

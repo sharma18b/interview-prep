@@ -37,11 +37,11 @@ const blog_create_get = (req, res) => {
 //     });
 // }
 const blog_create_post = (req, res) => {
-  console.log(req.file);
+  // console.log(req.file);
   const path1 = req.file.path.replace(/\\/g, '/');
-  console.log(path1);
+  // console.log(path1);
   const final_path = path1.slice(7);
-  console.log(final_path + 'after slicing the path');
+  // console.log(final_path + 'after slicing the path');
   const blog = new Blog({
       title: req.body.title,
       snippet: req.body.snippet,
@@ -50,7 +50,7 @@ const blog_create_post = (req, res) => {
   });
   blog.save()
     .then(result => {
-        console.log(result);
+      //   console.log(result);
       res.redirect('/intexp');
     })
     .catch(err => {

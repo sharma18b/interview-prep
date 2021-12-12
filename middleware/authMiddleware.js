@@ -12,7 +12,7 @@ const requireAuth = (req, res, next) => {
         console.log(err.message);
         res.redirect('/login');
       } else {
-        console.log(decodedToken);
+      // console.log(decodedToken);
         next();
       }
     });
@@ -31,16 +31,19 @@ const requireAdminAuth = (req, res, next) => {
         console.log(err.message);
         res.redirect('/home');
       } else {
-        console.log(decodedToken);
+        //console.log(decodedToken);
         let user = await User.findById(decodedToken.id);
         res.locals.user = user;
-        console.log(user.email);
+        //console.log(user.email);
         if (adminlist.includes(user.email))
         {
           next();
         }
         else
-       {console.log("You are not an admin boii fuck off");res.redirect('/');}
+       {
+         //console.log("You are not an admin boii fuck off");
+         res.redirect('/');
+        }
       }
     });
   } else {
@@ -58,10 +61,10 @@ const checkUser = (req,res,next) =>{
         res.locals.user = null;
         next();
       } else {
-        console.log(decodedToken);
+        //console.log(decodedToken);
         let user = await User.findById(decodedToken.id);
         res.locals.user = user;
-        console.log(user.email);
+        //console.log(user.email);
         next();
       }
     });

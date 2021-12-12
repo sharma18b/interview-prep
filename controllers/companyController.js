@@ -78,11 +78,11 @@ const exp_create_post = async (req, res) => {
     await Company.find({name : companyname}).then(result =>  {
      if (!Boolean(result.length > 0))
      {
-       console.log("No such company exists so new company is being created");
+       // console.log("No such company exists so new company is being created");
        const companytest = new Company({
          name : req.body.company,
        });
-       console.log(companytest);
+       // console.log(companytest);
       //  try {
       //  comp = companytest.save();
       //  console.log("ho gayi company save");
@@ -90,16 +90,16 @@ const exp_create_post = async (req, res) => {
       //  console.log(comp.id);
        companytest.save()
        .then(result1 => {
-         console.log(result1); // result 1 is the new topic that was created
+         // console.log(result1); // result 1 is the new topic that was created
         company_id = result1.id; // extracting its id from database
 
        })
          .catch(err => {
            console.log(err);
-           console.log("new company save hone me error hai check");
+           // console.log("new company save hone me error hai check");
          });
       company_id = companytest.id;
-      console.log('hell'); 
+      // console.log('hell'); 
     // }catch{
     //   console.log("me to thak gai bhaisha ");
 
@@ -107,7 +107,7 @@ const exp_create_post = async (req, res) => {
      }
      else
      {
-       console.log("company name matched in database");
+       // console.log("company name matched in database");
        company_id = result[0].id;
        // const exp = new Newexp({
        //   name: req.body.name,
@@ -133,9 +133,9 @@ const exp_create_post = async (req, res) => {
 
  console.log(req.file);
   const path1 = req.file.path.replace(/\\/g, '/');
-  console.log(path1);
+  // console.log(path1);
   const final_path = path1.slice(7);
-  console.log(final_path + 'after slicing the path');
+  // console.log(final_path + 'after slicing the path');
   const exp = new Newexp({
    name: req.body.name,
    company: company_id,
@@ -146,10 +146,10 @@ const exp_create_post = async (req, res) => {
    linktoblog:req.body.linktoblog,
    img: final_path
  });
- console.log('bhai yha aa gya hu');
+ // console.log('bhai yha aa gya hu');
  
  // saveCover(exp, req.body.cover);
- console.log('bhai yhabhi aa gya hu');
+ // console.log('bhai yhabhi aa gya hu');
  // exp.save()
  //   .then(result2 => {
  //     res.redirect('/company'); // redirecting to topic list
@@ -170,12 +170,12 @@ const exp_create_post = async (req, res) => {
 
 
  const company_exps = async (req, res) => {
-    console.log('inside the company exps');
+    // console.log('inside the company exps');
 
     const companyname = req.params.company.toString(); // topicname on printing in console gives "binary search"
     var id = "";
-    console.log(req.params.company.toString());
-    console.log("inside conroller conpany_exps");
+    // console.log(req.params.company.toString());
+    // console.log("inside conroller conpany_exps");
     await Company.find().then(results => {results.forEach(company => {
     if (company.name.toLowerCase() == companyname)
     {
@@ -199,7 +199,7 @@ function saveCover(exp, coverEncoded) {
   //JSON.stringify(userData)
 
   const cover = JSON.parse(coverEncoded);
-  console.log(cover.type.toString());
+  // console.log(cover.type.toString());
   if (cover != null && imageMimeTypes.includes(cover.type.toString())) {
     exp.displayPic = new Buffer.from(cover.data, 'base64');
     exp.displayPicType = cover.type;

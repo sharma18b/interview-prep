@@ -20,13 +20,13 @@ const storage = multer.diskStorage({
   
   const fileFilter = (req, file, cb) => {
     // reject a file
-    console.log("image file filter testing level 1 ");
+    // console.log("image file filter testing level 1 ");
     if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' || file.mimetype === 'image/jpg') {
       cb(null, true);
-      console.log("image file filter testing level 2 ");
+      // console.log("image file filter testing level 2 ");
     } else {
       cb(null, false);
-      console.log("image file filter testing level 3 ");
+      // console.log("image file filter testing level 3 ");
     }
   };
   
